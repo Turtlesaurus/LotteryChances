@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     tools:context=".LotteryChancesActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -15,71 +14,127 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop = "true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
             android:textStyle="bold"
+            android:id="@+id/mPot"
             android:text="MegaMillions"
             android:textSize="24dp" />
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/mPot"
             android:id="@+id/mInfo"
-            android:textSize="20dp"
+            android:textSize="24dp"
             android:text="" />
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_toEndOf="@+id/mInfo"
+            android:layout_below="@+id/mPot"
+            android:id="@+id/mLump"
+            android:textSize="18dp"
+            android:text="" />
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/mInfo"
             android:id="@+id/mProb"
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:text=""/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/mInfo"
+            android:layout_toEndOf="@+id/mProb"
+            android:id="@+id/mAfTax"
+            android:textSize="18dp"
+            android:text="" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/mProb"
+            android:layout_marginTop="25dp"
             android:textStyle="bold"
+            android:id="@+id/pPot"
             android:text="Powerball"
             android:textSize="24dp" />
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/pPot"
             android:id="@+id/pInfo"
-            android:textSize="20dp"
-            android:text=""/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/pProb"
-            android:textSize="20dp"
-            android:text=""/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="Lotto"
             android:textSize="24dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            android:text="" />
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lInfo"
-            android:textSize="20dp"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_toEndOf="@+id/pInfo"
+            android:layout_below="@+id/pPot"
+            android:id="@+id/pLump"
+            android:textSize="18dp"
+            android:text="" />
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/pInfo"
+            android:id="@+id/pProb"
+            android:textSize="22dp"
             android:text=""/>
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/lProb"
-            android:textSize="20dp"
-            android:text=""/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3" />
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/pInfo"
+            android:layout_toEndOf="@+id/pProb"
+            android:id="@+id/pAfTax"
+            android:textSize="18dp"
+            android:text="" />
 
-    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pProb"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:id="@+id/lPot"
+            android:text="Lotto"
+            android:textSize="24dp" />
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/lPot"
+            android:id="@+id/lInfo"
+            android:textSize="24dp"
+            android:text="" />
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_toEndOf="@+id/lInfo"
+            android:layout_below="@+id/lPot"
+            android:id="@+id/lLump"
+            android:textSize="18dp"
+            android:text="" />
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/lInfo"
+            android:id="@+id/lProb"
+            android:textSize="22dp"
+            android:text=""/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/lInfo"
+            android:layout_toEndOf="@+id/lProb"
+            android:layout_marginRight="30dp"
+            android:id="@+id/lAfTax"
+            android:textSize="18dp"
+            android:text="" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

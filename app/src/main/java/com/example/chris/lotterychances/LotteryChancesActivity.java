@@ -13,6 +13,10 @@ public class LotteryChancesActivity extends Activity {
     TextView mJack, pJack, lJack;
     //text views for probability based ticket values
     TextView mProb, pProb, lProb;
+    //text views for lump sums
+    TextView mLump, pLump, lLump;
+    //text views for taxed lump sums
+    TextView mAfTax, pAfTax, lAfTax;
     //pass instance of this class to getLottery so views can be updated
     getLottery mGL = new getLottery(this);
     getLottery pGL = new getLottery(this);
@@ -29,6 +33,12 @@ public class LotteryChancesActivity extends Activity {
         mProb = findViewById(R.id.mProb);
         pProb = findViewById(R.id.pProb);
         lProb = findViewById(R.id.lProb);
+        mLump = findViewById(R.id.mLump);
+        pLump = findViewById(R.id.pLump);
+        lLump = findViewById(R.id.lLump);
+        mAfTax = findViewById(R.id.mAfTax);
+        pAfTax = findViewById(R.id.pAfTax);
+        lAfTax = findViewById(R.id.lAfTax);
 
         mGL.runNumbers(2, .000000003304961888, 1.75, "https://www.lotto.net/mega-millions/numbers");
         pGL.runNumbers(2, .000000003422297813, 1.68, "https://www.lotto.net/powerball/numbers");
@@ -41,6 +51,16 @@ public class LotteryChancesActivity extends Activity {
         mJack.setText("$" + addCommas(mGL.getJackpot()));
         pJack.setText("$" + addCommas(pGL.getJackpot()));
         lJack.setText("$" + addCommas(lGL.getJackpot()));
+
+        //update displayed lump sum after adding commas
+        mLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getRawLumpSum()))));
+        pLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getRawLumpSum()))));
+        lLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getRawLumpSum()))));
+
+        //update displayed after tax lump sum after adding commas
+        mAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getTaxedLumpSum()))));
+        pAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getTaxedLumpSum()))));
+        lAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getTaxedLumpSum()))));
 
         //set display text and color for given value
         String mText = colorText(mGL.getProbValue(), mGL.getTicketPrice());
