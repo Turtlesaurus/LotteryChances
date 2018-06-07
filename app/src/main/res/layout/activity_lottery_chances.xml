@@ -22,14 +22,15 @@
             android:text="MegaMillions"
             android:textSize="24dp" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/mPot"
+            android:gravity="bottom"
             android:id="@+id/mInfo"
             android:textSize="24dp"
             android:text="" />
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_toEndOf="@+id/mInfo"
             android:layout_below="@+id/mPot"
@@ -37,14 +38,15 @@
             android:textSize="18dp"
             android:text="" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/mInfo"
+            android:gravity="bottom"
             android:id="@+id/mProb"
             android:textSize="22dp"
             android:text=""/>
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_below="@+id/mInfo"
             android:layout_toEndOf="@+id/mProb"
@@ -63,14 +65,15 @@
             android:text="Powerball"
             android:textSize="24dp" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/pPot"
+            android:gravity="bottom"
             android:id="@+id/pInfo"
             android:textSize="24dp"
             android:text="" />
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_toEndOf="@+id/pInfo"
             android:layout_below="@+id/pPot"
@@ -78,14 +81,15 @@
             android:textSize="18dp"
             android:text="" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/pInfo"
+            android:gravity="bottom"
             android:id="@+id/pProb"
             android:textSize="22dp"
             android:text=""/>
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_below="@+id/pInfo"
             android:layout_toEndOf="@+id/pProb"
@@ -104,14 +108,15 @@
             android:text="Lotto"
             android:textSize="24dp" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/lPot"
+            android:gravity="bottom"
             android:id="@+id/lInfo"
             android:textSize="24dp"
             android:text="" />
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_toEndOf="@+id/lInfo"
             android:layout_below="@+id/lPot"
@@ -119,18 +124,18 @@
             android:textSize="18dp"
             android:text="" />
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="220dp"
             android:layout_height="45dp"
             android:layout_below="@+id/lInfo"
+            android:gravity="bottom"
             android:id="@+id/lProb"
             android:textSize="22dp"
             android:text=""/>
         <TextView
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_below="@+id/lInfo"
             android:layout_toEndOf="@+id/lProb"
-            android:layout_marginRight="30dp"
             android:id="@+id/lAfTax"
             android:textSize="18dp"
             android:text="" />

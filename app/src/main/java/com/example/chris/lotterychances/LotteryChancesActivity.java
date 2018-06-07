@@ -53,14 +53,14 @@ public class LotteryChancesActivity extends Activity {
         lJack.setText("$" + addCommas(lGL.getJackpot()));
 
         //update displayed lump sum after adding commas
-        mLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getRawLumpSum()))));
-        pLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getRawLumpSum()))));
-        lLump.setText("Lump: ~$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getRawLumpSum()))));
+        mLump.setText("Lump:\n$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getRawLumpSum()))));
+        pLump.setText("Lump:\n$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getRawLumpSum()))));
+        lLump.setText("Lump:\n$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getRawLumpSum()))));
 
         //update displayed after tax lump sum after adding commas
-        mAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getTaxedLumpSum()))));
-        pAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getTaxedLumpSum()))));
-        lAfTax.setText("Taxed: ~$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getTaxedLumpSum()))));
+        mAfTax.setText("Taxed:\n$" + addCommas(Integer.parseInt(String.format("%.0f", mGL.getTaxedLumpSum()))));
+        pAfTax.setText("Taxed:\n$" + addCommas(Integer.parseInt(String.format("%.0f", pGL.getTaxedLumpSum()))));
+        lAfTax.setText("Taxed:\n$" + addCommas(Integer.parseInt(String.format("%.0f", lGL.getTaxedLumpSum()))));
 
         //set display text and color for given value
         String mText = colorText(mGL.getProbValue(), mGL.getTicketPrice());
@@ -76,13 +76,13 @@ public class LotteryChancesActivity extends Activity {
     //turn ticket value pretty colors based on comparison to cost
     public String colorText(double tempValue, int tempPrice){
         if(tempValue/tempPrice >= 1){
-            return "Ticket value: $" + "<font color=\'green\'>";
+            return "$" + tempPrice + " value: $" + "<font color=\'green\'>";
         }else if(tempValue/tempPrice >= .9){
-            return "Ticket value: $" + "<font color=\'yellow\'>";
+            return "$" + tempPrice + " value: $" + "<font color=\'yellow\'>";
         }else if(tempValue/tempPrice >= .75){
-            return "Ticket value: $" + "<font color=\'#FFA500\'>";
+            return "$" + tempPrice + " value: $" + "<font color=\'#FFA500\'>";
         }else{
-            return "Ticket value: $" + "<font color=\'red\'>";
+            return "$" + tempPrice + " value: $" + "<font color=\'red\'>";
         }
     }
 
