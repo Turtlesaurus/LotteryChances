@@ -1,13 +1,13 @@
 package com.example.chris.lotterychances;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.text.Html;
 import java.text.DecimalFormat;
 
 
-public class LotteryChancesActivity extends Activity {
+public class LotteryChancesActivity extends AppCompatActivity {
     //global declarations
     //text views for jackpot amounts
     TextView mJack, pJack, lJack;
