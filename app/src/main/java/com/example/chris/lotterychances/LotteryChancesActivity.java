@@ -76,13 +76,13 @@ public class LotteryChancesActivity extends AppCompatActivity {
     //turn ticket value pretty colors based on comparison to cost
     public String colorText(double tempValue, int tempPrice){
         if(tempValue/tempPrice >= 1){
-            return "$" + tempPrice + " value: $" + "<font color=\'green\'>";
+            return "Value: $" + "<font color=\'green\'>";
         }else if(tempValue/tempPrice >= .9){
-            return "$" + tempPrice + " value: $" + "<font color=\'yellow\'>";
+            return "Value: $" + "<font color=\'yellow\'>";
         }else if(tempValue/tempPrice >= .75){
-            return "$" + tempPrice + " value: $" + "<font color=\'#FFA500\'>";
+            return "Value: $" + "<font color=\'#FFA500\'>";
         }else{
-            return "$" + tempPrice + " value: $" + "<font color=\'red\'>";
+            return "Value: $" + "<font color=\'red\'>";
         }
     }
 
